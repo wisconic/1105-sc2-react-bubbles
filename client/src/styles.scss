@@ -97,3 +97,39 @@ form {
     margin-top: 16px;
   }
 }
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.Login {
+  height: 100%; 
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 35%;
+    min-height: 55%;
+    margin: 0 auto;
+
+    .inputs {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.container {
+  margin: 2% 2%;
+  padding: 4%;
+
+  border: 1px solid rgb(210, 210, 210);
+  border-radius: 6px;
+  box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
+
+  background-color: white;
+}
