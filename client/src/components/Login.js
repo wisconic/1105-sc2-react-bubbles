@@ -17,6 +17,7 @@ const Login = (props) => {
     console.log("username", username);
     console.log("password", password);
     setIsLoading(true);
+    setError("");
     axiosWithAuth()
       .post("/api/login", { username, password })
       .then((res) => {
@@ -38,14 +39,14 @@ const Login = (props) => {
     <div className='Login container'>
       <h3 style={{ color: "red" }}>{error}</h3>
       {isLoading ? (
-        <h1>Attempting Login</h1>
+        <h1>Attempting Login...</h1>
       ) : (
         // react-hook-form does validation in handleSubmit before attemptLogin
         <form
           onSubmit={handleSubmit(attemptLogin)}
           className='login-form container'
         >
-          <h1>Login!</h1>
+          <h1>Login</h1>
           <div className='inputs'>
             <input
               type='text'
